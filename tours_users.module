@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Tours Users feature.
+ */
+
+include_once 'tours_users.features.inc';
