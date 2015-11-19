@@ -12,3 +12,20 @@ function tours_users_ctools_plugin_api($module = NULL, $api = NULL) {
     return array("version" => "1");
   }
 }
+
+/**
+ * Implements hook_default_profile2_type().
+ */
+function tours_users_default_profile2_type() {
+  $items = array();
+  $items['tour_operator'] = entity_import('profile2_type', '{
+    "userCategory" : true,
+    "userView" : true,
+    "type" : "tour_operator",
+    "label" : "Tour Operator",
+    "weight" : "0",
+    "data" : { "registration" : 0 },
+    "rdf_mapping" : []
+  }');
+  return $items;
+}
