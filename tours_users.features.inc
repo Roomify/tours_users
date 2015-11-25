@@ -34,5 +34,26 @@ function tours_users_default_profile2_type() {
     "data" : { "registration" : 0 },
     "rdf_mapping" : []
   }');
+  $items['tour_owner'] = entity_import('profile2_type', '{
+    "userCategory" : true,
+    "userView" : true,
+    "type" : "tour_owner",
+    "label" : "Tour Owner",
+    "weight" : "0",
+    "data" : {
+      "registration" : 0,
+      "roles" : {
+        "2" : "2",
+        "6" : "6",
+        "5" : "5",
+        "7" : "7",
+        "9" : "9",
+        "4" : "4",
+        "8" : "8",
+        "3" : "3"
+      }
+    },
+    "rdf_mapping" : []
+  }');
   return $items;
 }
