@@ -25,34 +25,13 @@ function tours_users_views_api($module = NULL, $api = NULL) {
  */
 function tours_users_default_profile2_type() {
   $items = array();
-  $items['tour_operator'] = entity_import('profile2_type', '{
-    "userCategory" : true,
-    "userView" : true,
-    "type" : "tour_operator",
-    "label" : "Tour Operator",
-    "weight" : "0",
-    "data" : { "registration" : 0 },
-    "rdf_mapping" : []
-  }');
   $items['tour_owner'] = entity_import('profile2_type', '{
     "userCategory" : true,
     "userView" : true,
     "type" : "tour_owner",
     "label" : "Tour Owner",
     "weight" : "0",
-    "data" : {
-      "registration" : 0,
-      "roles" : {
-        "2" : "2",
-        "6" : "6",
-        "5" : "5",
-        "7" : "7",
-        "9" : "9",
-        "4" : "4",
-        "8" : "8",
-        "3" : "3"
-      }
-    },
+    "data" : { "registration" : 0, "roles" : { "10" : "10" } },
     "rdf_mapping" : []
   }');
   return $items;
