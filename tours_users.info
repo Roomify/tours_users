@@ -30,5 +30,7 @@ features[user_permission][] = create rooms_unit entities of bundle multi_day_tou
 features[user_permission][] = create rooms_unit entities of bundle private_single_day_tour_slot
 features[user_permission][] = create rooms_unit entities of bundle single_day_tour
 features[user_permission][] = create rooms_unit entities of bundle single_day_tour_slot
+features[user_permission][] = edit own tour_owner profile
+features[user_permission][] = view any tour_owner profile
 features[views_view][] = my_bookable_units_tours
 features_exclude[dependencies][rooms_unit] = rooms_unit

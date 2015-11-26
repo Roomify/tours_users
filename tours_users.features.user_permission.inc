@@ -55,5 +55,24 @@ function tours_users_user_default_permissions() {
     'module' => 'rooms_unit',
   );
 
+  // Exported permission: 'edit own tour_owner profile'.
+  $permissions['edit own tour_owner profile'] = array(
+    'name' => 'edit own tour_owner profile',
+    'roles' => array(
+      'tour_owner' => 'tour_owner',
+    ),
+    'module' => 'profile2',
+  );
+
+  // Exported permission: 'view any tour_owner profile'.
+  $permissions['view any tour_owner profile'] = array(
+    'name' => 'view any tour_owner profile',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'profile2',
+  );
+
   return $permissions;
 }
