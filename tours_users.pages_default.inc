@@ -35,7 +35,7 @@ function tours_users_default_page_manager_handlers() {
           'name' => 'role',
           'settings' => array(
             'rids' => array(
-              0 => 135991234,
+              0 => 10,
             ),
           ),
           'context' => 'argument_entity_id:user_1',
@@ -223,4 +223,143 @@ function tours_users_default_page_manager_handlers() {
   $export['user_view__tour-owner-dashboard'] = $handler;
 
   return $export;
+}
+
+/**
+ * Implements hook_default_page_manager_pages().
+ */
+function tours_users_default_page_manager_pages() {
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
+  $page->name = 'host_profile_page';
+  $page->task = 'page';
+  $page->admin_title = 'Host Profile Page';
+  $page->admin_description = '';
+  $page->path = 'host/%name';
+  $page->access = array();
+  $page->menu = array();
+  $page->arguments = array(
+    'name' => array(
+      'id' => 1,
+      'identifier' => 'Profile: ID',
+      'name' => 'entity_id:profile2',
+      'settings' => array(),
+    ),
+  );
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_host_profile_page__panel';
+  $handler->task = 'page';
+  $handler->subtask = 'host_profile_page';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Panel',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => 'profile-page',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(
+      0 => array(
+        'identifier' => 'User from Profile (on profile.uid)',
+        'keyword' => 'user',
+        'name' => 'entity_from_schema:uid-profile2-user',
+        'context' => 'argument_entity_id:profile2_1',
+        'id' => 1,
+      ),
+    ),
+    'name' => 'panel',
+    'pathalias' => 'host/%name:field_tour_owner_name',
+  );
+  $display = new panels_display();
+  $display->layout = 'bootstrap_sidebar_right';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'top' => NULL,
+      'left' => NULL,
+      'right' => NULL,
+      'bottom' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '%name:field-tour-owner-name	';
+  $display->uuid = '7954eb01-2f8a-4fba-9f72-662fca3705e7';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-af4e2b86-231e-4874-bc53-11cc09dc3ae6';
+    $pane->panel = 'bottom';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'tour_profile_pages-panel_pane_3';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'af4e2b86-231e-4874-bc53-11cc09dc3ae6';
+    $display->content['new-af4e2b86-231e-4874-bc53-11cc09dc3ae6'] = $pane;
+    $display->panels['bottom'][0] = 'new-af4e2b86-231e-4874-bc53-11cc09dc3ae6';
+    $pane = new stdClass();
+    $pane->pid = 'new-5f14be4c-38aa-4480-b5c8-afe561990db9';
+    $pane->panel = 'left';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'tour_profile_pages-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '5f14be4c-38aa-4480-b5c8-afe561990db9';
+    $display->content['new-5f14be4c-38aa-4480-b5c8-afe561990db9'] = $pane;
+    $display->panels['left'][0] = 'new-5f14be4c-38aa-4480-b5c8-afe561990db9';
+    $pane = new stdClass();
+    $pane->pid = 'new-4ffc8697-b266-42d9-916d-c515a6cc851c';
+    $pane->panel = 'right';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'tour_profile_pages-panel_pane_2';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '4ffc8697-b266-42d9-916d-c515a6cc851c';
+    $display->content['new-4ffc8697-b266-42d9-916d-c515a6cc851c'] = $pane;
+    $display->panels['right'][0] = 'new-4ffc8697-b266-42d9-916d-c515a6cc851c';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['host_profile_page'] = $page;
+
+  return $pages;
+
 }
