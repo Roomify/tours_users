@@ -9,6 +9,7 @@ dependencies[] = image
 dependencies[] = page_manager
 dependencies[] = panels_mini
 dependencies[] = profile2
+dependencies[] = role_export
 dependencies[] = rooms_booking
 dependencies[] = text
 dependencies[] = views

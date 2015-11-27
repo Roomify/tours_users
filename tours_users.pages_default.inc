@@ -35,7 +35,7 @@ function tours_users_default_page_manager_handlers() {
           'name' => 'role',
           'settings' => array(
             'rids' => array(
-              0 => 9,
+              0 => 135991234,
             ),
           ),
           'context' => 'argument_entity_id:user_1',
