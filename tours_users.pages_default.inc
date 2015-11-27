@@ -35,7 +35,7 @@ function tours_users_default_page_manager_handlers() {
           'name' => 'role',
           'settings' => array(
             'rids' => array(
-              0 => 10,
+              0 => 9,
             ),
           ),
           'context' => 'argument_entity_id:user_1',
@@ -99,13 +99,17 @@ function tours_users_default_page_manager_handlers() {
     $display->content['new-fadf1276-141e-44fc-b166-e684483aba7c'] = $pane;
     $display->panels['top'][0] = 'new-fadf1276-141e-44fc-b166-e684483aba7c';
     $pane = new stdClass();
-    $pane->pid = 'new-ab5991d9-9350-44fd-9881-f5d5b56d2247';
+    $pane->pid = 'new-3672017b-8470-4150-90dd-0fd272dadbfe';
     $pane->panel = 'top';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'my_bookable_units_tours-panel_pane_1';
+    $pane->type = 'panels_mini';
+    $pane->subtype = 'my_activities';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'My Activities',
+      'override_title_heading' => 'h2',
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -114,9 +118,9 @@ function tours_users_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $pane->uuid = 'ab5991d9-9350-44fd-9881-f5d5b56d2247';
-    $display->content['new-ab5991d9-9350-44fd-9881-f5d5b56d2247'] = $pane;
-    $display->panels['top'][1] = 'new-ab5991d9-9350-44fd-9881-f5d5b56d2247';
+    $pane->uuid = '3672017b-8470-4150-90dd-0fd272dadbfe';
+    $display->content['new-3672017b-8470-4150-90dd-0fd272dadbfe'] = $pane;
+    $display->panels['top'][1] = 'new-3672017b-8470-4150-90dd-0fd272dadbfe';
     $pane = new stdClass();
     $pane->pid = 'new-5923ecf6-a71e-43bc-ad48-27a71d294c9a';
     $pane->panel = 'top';
