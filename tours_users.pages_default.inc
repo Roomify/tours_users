@@ -293,7 +293,7 @@ function tours_users_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = '%name:field-tour-owner-name	';
+  $display->title = '';
   $display->uuid = '7954eb01-2f8a-4fba-9f72-662fca3705e7';
   $display->content = array();
   $display->panels = array();
@@ -309,7 +309,10 @@ function tours_users_default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'host-activities',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
@@ -328,7 +331,10 @@ function tours_users_default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'host-top',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
@@ -347,7 +353,10 @@ function tours_users_default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'host-right',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();

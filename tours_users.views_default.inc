@@ -352,6 +352,7 @@ function tours_users_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = '%name:field-tour-owner-name	';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -594,7 +595,7 @@ function tours_users_views_default_views() {
   $handler->display->display_options['fields']['pid']['table'] = 'profile';
   $handler->display->display_options['fields']['pid']['field'] = 'pid';
   $handler->display->display_options['fields']['pid']['exclude'] = TRUE;
-  /* Field: Bookable Units: Search/Featured Image */
+  /* Field: Bookable Units: Featured Image */
   $handler->display->display_options['fields']['field_property_image']['id'] = 'field_property_image';
   $handler->display->display_options['fields']['field_property_image']['table'] = 'field_data_field_property_image';
   $handler->display->display_options['fields']['field_property_image']['field'] = 'field_property_image';
@@ -603,7 +604,7 @@ function tours_users_views_default_views() {
   $handler->display->display_options['fields']['field_property_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_property_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_property_image']['settings'] = array(
-    'image_style' => 'roomify_4_3',
+    'image_style' => 'thumb_unit_search',
     'image_link' => 'content',
     'conditions' => array(
       0 => array(
@@ -620,7 +621,7 @@ function tours_users_views_default_views() {
   $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['name']['alter']['path'] = '[link_unit] ';
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
-  /* Field: Bookable Units: Address - Locality (i.e. City) */
+  /* Field: Bookable Units: Activity Location Address - Locality (i.e. City) */
   $handler->display->display_options['fields']['field_address_locality']['id'] = 'field_address_locality';
   $handler->display->display_options['fields']['field_address_locality']['table'] = 'field_data_field_address';
   $handler->display->display_options['fields']['field_address_locality']['field'] = 'field_address_locality';
