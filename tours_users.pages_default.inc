@@ -81,7 +81,7 @@ function tours_users_default_page_manager_handlers() {
         0 => 'argument_entity_id:user_1',
       ),
       'override_title' => 1,
-      'override_title_text' => 'Welcome',
+      'override_title_text' => 'Dashboard',
       'override_title_heading' => 'h2',
     );
     $pane->cache = array();
@@ -107,7 +107,7 @@ function tours_users_default_page_manager_handlers() {
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 1,
-      'override_title_text' => 'My Activities',
+      'override_title_text' => 'My Hosted Activities',
       'override_title_heading' => 'h2',
     );
     $pane->cache = array();
@@ -121,67 +121,6 @@ function tours_users_default_page_manager_handlers() {
     $pane->uuid = '3672017b-8470-4150-90dd-0fd272dadbfe';
     $display->content['new-3672017b-8470-4150-90dd-0fd272dadbfe'] = $pane;
     $display->panels['top'][1] = 'new-3672017b-8470-4150-90dd-0fd272dadbfe';
-    $pane = new stdClass();
-    $pane->pid = 'new-5923ecf6-a71e-43bc-ad48-27a71d294c9a';
-    $pane->panel = 'top';
-    $pane->type = 'panels_mini';
-    $pane->subtype = 'bookings';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => 'My Bookings',
-      'override_title_heading' => 'h2',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $pane->uuid = '5923ecf6-a71e-43bc-ad48-27a71d294c9a';
-    $display->content['new-5923ecf6-a71e-43bc-ad48-27a71d294c9a'] = $pane;
-    $display->panels['top'][2] = 'new-5923ecf6-a71e-43bc-ad48-27a71d294c9a';
-    $pane = new stdClass();
-    $pane->pid = 'new-b6570ba4-934e-49f6-a7f3-fb1339d5de95';
-    $pane->panel = 'top';
-    $pane->type = 'views';
-    $pane->subtype = 'rooms_sales_reports';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 0,
-      'nodes_per_page' => '0',
-      'pager_id' => '0',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 0,
-      'link_to_view' => 0,
-      'args' => '',
-      'url' => '',
-      'display' => 'page_2',
-      'context' => array(
-        0 => '',
-      ),
-      'override_title' => 1,
-      'override_title_text' => 'Bookings Report',
-      'override_title_heading' => 'h2',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 3;
-    $pane->locks = array();
-    $pane->uuid = 'b6570ba4-934e-49f6-a7f3-fb1339d5de95';
-    $display->content['new-b6570ba4-934e-49f6-a7f3-fb1339d5de95'] = $pane;
-    $display->panels['top'][3] = 'new-b6570ba4-934e-49f6-a7f3-fb1339d5de95';
     $pane = new stdClass();
     $pane->pid = 'new-daa83852-a3ad-4de4-b96a-5a5c6fbccdbf';
     $pane->panel = 'top';
@@ -212,11 +151,11 @@ function tours_users_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 4;
+    $pane->position = 2;
     $pane->locks = array();
     $pane->uuid = 'daa83852-a3ad-4de4-b96a-5a5c6fbccdbf';
     $display->content['new-daa83852-a3ad-4de4-b96a-5a5c6fbccdbf'] = $pane;
-    $display->panels['top'][4] = 'new-daa83852-a3ad-4de4-b96a-5a5c6fbccdbf';
+    $display->panels['top'][2] = 'new-daa83852-a3ad-4de4-b96a-5a5c6fbccdbf';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
